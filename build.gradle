@@ -17,9 +17,9 @@ buildscript {
 
 apply plugin: 'forge'
 
-version = "1.7.10-1.1.0"
-group= "com.black_dog20.dvm" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
-archivesBaseName = "dvm"
+version = "1.7.10-1.3Beta"
+group= "com.black_dog20.vut" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
+archivesBaseName = "vut"
 
 minecraft {
     version = "1.7.10-10.13.4.1558-1.7.10"

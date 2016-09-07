@@ -12,22 +12,22 @@ public class ModItems {
 	public static final ItemHoverBike HoverBike = new ItemHoverBike();
 	public static final ItemVUT Wrench = new ItemVUT("wrench"); 
 	public static final ItemVUT Engine = new ItemVUT("engine"); 
-	public static final ItemVUT Chest = new ItemVUT("Chest"); 
-	public static final ItemVUT Chest2 = new ItemVUT("Chest2"); 
-	public static final ItemVUT FlightDrive = new ItemVUT("FlightDrive"); 
-	public static final ItemVUT Security = new ItemVUT("Security"); 
-	public static final ItemVUT Vtol = new ItemVUT("Vtol");
-	public static final ItemVUT FuelTank = new ItemVUT("FuelTank"); 
-	public static final ItemVUT Fuel = new ItemVUT("Fuel"); 
-	public static final ItemVUT Fuel1 = new ItemVUT("Fuel1"); 
-	public static final ItemVUT Fuel2 = new ItemVUT("Fuel2"); 
-	public static final ItemVUT Hammer = new ItemVUT("Hammer"); 
-	public static final ItemVUT Front = new ItemVUT("Front");
-	public static final ItemVUT Back = new ItemVUT("Back");
-	public static final ItemVUT FlightCore = new ItemVUT("FlightCore");
-	public static final ItemVUT IngotBlueIron = new ItemVUT("IngotBlueIron");
-	public static final ItemVUT DustBlackIron = new ItemVUT("DustBlackIron");
-	public static final ItemVUT IngotBlackIron = new ItemVUT("IngotBlackIron");
+	public static final ItemVUT Chest = new ItemVUT("chest"); 
+	public static final ItemVUT Chest2 = new ItemVUT("chest2"); 
+	public static final ItemVUT FlightDrive = new ItemVUT("flightDrive"); 
+	public static final ItemVUT Security = new ItemVUT("security"); 
+	public static final ItemVUT Vtol = new ItemVUT("vtol");
+	public static final ItemVUT FuelTank = new ItemVUT("fuelTank"); 
+	public static final ItemVUT Fuel = new ItemVUT("fuel"); 
+	public static final ItemVUT Fuel1 = new ItemVUT("fuel1"); 
+	public static final ItemVUT Fuel2 = new ItemVUT("fuel2"); 
+	public static final ItemVUT Hammer = new ItemVUT("hammer"); 
+	public static final ItemVUT Front = new ItemVUT("front");
+	public static final ItemVUT Back = new ItemVUT("back");
+	public static final ItemVUT FlightCore = new ItemVUT("flightCore");
+	public static final ItemVUT IngotBlueIron = new ItemVUT("ingotBlueIron");
+	public static final ItemVUT DustBlackIron = new ItemVUT("dustBlackIron");
+	public static final ItemVUT IngotBlackIron = new ItemVUT("ingotBlackIron");
 	
 	public static void init() {
 

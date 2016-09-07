@@ -2,22 +2,22 @@
 item.vut:hoverBike.name=Hover Bike
 item.vut:wrench.name=Wrench
 item.vut:engine.name=Engine
-item.vut:Chest.name=Small Chest Upgrade
-item.vut:Chest2.name=Big Chest Upgrade
-item.vut:FlightDrive.name=Flight Drive
-item.vut:Security.name=Security Upgrade 
-item.vut:Vtol.name=VTOL Upgrade
-item.vut:FuelTank.name=Fuel Tank
-item.vut:Fuel.name=Hover Bike Fuel
-item.vut:Fuel1.name=Hover Bike Base Fuel
-item.vut:Fuel2.name=Hover Bike Unprocessed Fuel
-item.vut:Hammer.name=Hammer
-item.vut:Front.name=Hover Bike Front
-item.vut:Back.name=Hover Bike Back
-item.vut:FlightCore.name=Flight Drive Core
-item.vut:IngotBlueIron.name=Blue Iron Ingot
-item.vut:IngotBlackIron.name=Black Iron Ingot
-item.vut:DustBlackIron.name=Black Iron Dust
+item.vut:chest.name=Small Chest Upgrade
+item.vut:chest2.name=Big Chest Upgrade
+item.vut:flightDrive.name=Flight Drive
+item.vut:security.name=Security Upgrade 
+item.vut:vtol.name=VTOL Upgrade
+item.vut:fuelTank.name=Fuel Tank
+item.vut:fuel.name=Hover Bike Fuel
+item.vut:fuel1.name=Hover Bike Base Fuel
+item.vut:fuel2.name=Hover Bike Unprocessed Fuel
+item.vut:hammer.name=Hammer
+item.vut:front.name=Hover Bike Front
+item.vut:back.name=Hover Bike Back
+item.vut:flightCore.name=Flight Drive Core
+item.vut:ingotBlueIron.name=Blue Iron Ingot
+item.vut:ingotBlackIron.name=Black Iron Ingot
+item.vut:dustBlackIron.name=Black Iron Dust
 
 
 //Entities
