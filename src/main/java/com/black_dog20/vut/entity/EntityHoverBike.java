@@ -128,7 +128,7 @@ public class EntityHoverBike extends EntityHoverVehicle {
 
 	@Override
 	public String Name() {
-		return "Speeder";
+		return "Hover Bike";
 	}
 
 	@Override

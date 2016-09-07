@@ -22,7 +22,7 @@ public class KeyInputEventHandler {
 
 	@SubscribeEvent
 	public void handleKeyInputEvent(InputEvent.KeyInputEvent event) {
-		if (Keybindings.fly.isPressed()){
+		if (Keybindings.START.isPressed()){
 			if (FMLClientHandler.instance().getClientPlayerEntity() != null) {
 				EntityPlayer entityPlayer = FMLClientHandler.instance().getClientPlayerEntity();
 				if(entityPlayer.ridingEntity instanceof IEntityHoverVehicle){

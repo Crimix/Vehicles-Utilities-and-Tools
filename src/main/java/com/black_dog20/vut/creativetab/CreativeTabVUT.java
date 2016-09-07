@@ -4,6 +4,7 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 
+import com.black_dog20.vut.init.ModItems;
 import com.black_dog20.vut.reference.Reference;
 
 public class CreativeTabVUT{
@@ -12,8 +13,7 @@ public class CreativeTabVUT{
 
 		@Override
 		public Item getTabIconItem() {
-			return Items.apple;
-			//return ModItems.TLSOC;
+			return ModItems.HoverBike;
 		}
 
 		@Override

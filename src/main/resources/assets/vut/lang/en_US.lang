@@ -1,167 +1,41 @@
 //Items
-item.tucs:TLSOC.name=The Legendary Sword of The true fighter
-item.tucs:ingotCobblestoneium.name=Cobblestoneium Ingot
-item.tucs:ingotCobblestonedium.name=Cobblestonedium Ingot
-item.tucs:cobblestoneLighter.name=Cobblestone Lighter
-item.tucs:cobblestonediumLighter.name=Cobblestonedium Lighter
-item.tucs:cobblestoneiumLighter.name=Cobblestoneium Lighter
-item.tucs:ShovelCobblestoneium.name=Cobblestoneium Shovel
-item.tucs:SwordCobblestoneium.name=Cobblestoneium Sword
-item.tucs:HatchetCobblestoneium.name=Cobblestoneium Axe
-item.tucs:HoeCobblestoneium.name=Cobblestoneium Hoe
-item.tucs:PickaxeCobblestoneium.name=Cobblestoneium Pickaxe
-item.tucs:helmetCobblestoneium.name=Cobblestoneium Helmet
-item.tucs:leggingsCobblestoneium.name=Cobblestoneium Leggings
-item.tucs:bootsCobblestoneium.name=Cobblestoneium Boots
-item.tucs:chestplateCobblestoneium.name=Cobblestoneium Chestplate
-item.tucs:tucsBook.name=The Ancient book
-item.tucs:cobbleCoal.name=Cobblestone Coal
-item.tucs:TUCSDebug.name=Debug Tool
-item.tucs:flightTalisman.name=Semi-gods Talisman of flying 
-item.tucs:unfinishedflightTalisman.name=Unfinished Talisman
-item.tucs:unenchantedflightTalisman.name=Unfinished Talisman
-item.tucs:swordBlade.name=Sword Blade
-item.tucs:swordHilt.name=Sword Hilt
-item.tucs:TLBOTB.name=The Legendary Axe of The Battlemaster
-item.tucs:TLHOWF.name=The Legendary Hoe of The Weird Farmer
-item.tucs:TLPOLM.name=The Legendary Pickaxe of The Lost Miner
-item.tucs:TLSOHD.name=The Legendary Shovel of The Hole Digger
-item.tucs:craftingTalisman.name=Talisman of Crafting
-item.tucs:talismanBaseT1.name=Tier 1 Talisman Base
-item.tucs:talismanBaseT2.name=Tier 2 Talisman Base
-item.tucs:torchTalisman.name=The Lost Miner's Talisman of Light
-item.tucs:toolRod.name=Tool Rod
-item.tucs:shovelHead.name=Shovel Head
-item.tucs:pickaxeHead.name=Pickaxe Head
-item.tucs:hoeHead.name=Hoe Head
-item.tucs:hatchetHead.name=Battleaxe Head
-item.tucs:upgradeBase.name=Tier 1 Upgrade Base
-item.tucs:upgradeBaseT2.name=Tier 2 Upgrade Base 
-item.tucs:ingotYellowstoneium.name= Yellowstoneium Ingot
-item.tucs:beheadingUpgrade.name=Beheading Upgrade
-item.tucs:bowTLBOTH.name=The Legendary Bow of The Hunter
-item.tucs:bowTLBOTHBroken.name=The Broken Bow of The Hunter
-item.tucs:helmetCobblestonedium_broken.name=The Broken Helmet of The Warrior
-item.tucs:leggingsCobblestonedium_broken.name=The Broken Leggings of The Warrior
-item.tucs:bootsCobblestonedium_broken.name=The Broken Boots of The Warrior
-item.tucs:chestplateCobblestonedium_broken.name=The Broken Chestplate of The Warrior
-item.tucs:helmetCobblestonedium.name=The Legendary Helmet of The Warrior
-item.tucs:leggingsCobblestonedium.name=The Legendary Leggings of The Warrior
-item.tucs:bootsCobblestonedium.name=The Legendary Boots of The Warrior
-item.tucs:chestplateCobblestonedium.name=The Legendary Chestplate of The Warrior
-item.tucs:m1911.name=M1911
-item.tucs:ammo.name=M1911 Ammo
-item.tucs:TLSOTD.name=§cThe Legendary Sword of The Destroyer of worlds
-item.tucs:scubaMask.name=Scuba Mask
-item.tucs:airtank.name=Air Tank
-item.tucs:helmetCobblestonedium_scuba.name=The Legendary Helmet of The Warrior
-item.tucs:chestplateCobblestonedium_scuba.name=The Legendary Chestplate of The Warrior
-item.tucs:tier1CraftingMat.name=Tier 1 Crafting Material
-item.tucs:tier2CraftingMat.name=Tier 2 Crafting Material
-item.tucs:tier3CraftingMat.name=Tier 3 Crafting Material
-item.tucs:tier4CraftingMat.name=Tier 4 Crafting Material
-item.tucs:fragmentHeartDestroyer.name=§cFragment of the "Heart" of the Destroyer
+item.vut:hoverBike.name=Hover Bike
+item.vut:wrench.name=Wrench
+item.vut:engine.name=Engine
+item.vut:Chest.name=Small Chest Upgrade
+item.vut:Chest2.name=Big Chest Upgrade
+item.vut:FlightDrive.name=Flight Drive
+item.vut:Security.name=Security Upgrade 
+item.vut:Vtol.name=VTOL Upgrade
+item.vut:FuelTank.name=Fuel Tank
+item.vut:Fuel.name=Hover Bike Fuel
+item.vut:Fuel1.name=Hover Bike Base Fuel
+item.vut:Fuel2.name=Hover Bike Unprocessed Fuel
+item.vut:Hammer.name=Hammer
+item.vut:Front.name=Hover Bike Front
+item.vut:Back.name=Hover Bike Back
+item.vut:FlightCore.name=Flight Drive Core
+item.vut:IngotBlueIron.name=Blue Iron Ingot
+item.vut:IngotBlackIron.name=Black Iron Ingot
+item.vut:DustBlackIron.name=Black Iron Dust
 
-//Upgrades
-item.tucs:looting1Upgrade.name=Luck 1 Upgrade
-item.tucs:looting2Upgrade.name=Luck 2 Upgrade
-item.tucs:looting3Upgrade.name=Luck 3 Upgrade
-item.tucs:soulboundUpgrade.name=Soulbound Upgrade
-item.tucs:sharpness1Upgrade.name=Sharpness 1 Upgrade
-item.tucs:sharpness2Upgrade.name=Sharpness 2 Upgrade
-item.tucs:sharpness3Upgrade.name=Sharpness 3 Upgrade
-item.tucs:sharpness4Upgrade.name=Sharpness 4 Upgrade
-item.tucs:sharpness5Upgrade.name=Sharpness 5 Upgrade
-item.tucs:infiUpgrade.name=Infinity Upgrade
-item.tucs:sliktouch1Upgrade.name=Silk Touch Upgrade
-item.tucs:autoBowUpgrade.name=Full Auto bow Upgrade
-item.tucs:aquaAffinity1Upgrade.name=Aqua Affinity Upgrade
-item.tucs:blastProtection1Upgrade.name=Blast Protection 1 Upgrade
-item.tucs:blastProtection2Upgrade.name=Blast Protection 2 Upgrade
-item.tucs:blastProtection3Upgrade.name=Blast Protection 3 Upgrade
-item.tucs:blastProtection4Upgrade.name=Blast Protection 4 Upgrade
-item.tucs:featherFalling1Upgrade.name=Feather Falling 1 Upgrade
-item.tucs:featherFalling2Upgrade.name=Feather Falling 2 Upgrade
-item.tucs:featherFalling3Upgrade.name=Feather Falling 3 Upgrade
-item.tucs:featherFalling4Upgrade.name=Feather Falling 4 Upgrade
-item.tucs:fireProtection1Upgrade.name=Fire Protection 1 Upgrade
-item.tucs:fireProtection2Upgrade.name=Fire Protection 2 Upgrade
-item.tucs:fireProtection3Upgrade.name=Fire Protection 3 Upgrade
-item.tucs:fireProtection4Upgrade.name=Fire Protection 4 Upgrade
-item.tucs:flame1Upgrade.name=Flame Upgrade
-item.tucs:power1Upgrade.name=Power 1 Upgrade
-item.tucs:power2Upgrade.name=Power 2 Upgrade
-item.tucs:power3Upgrade.name=Power 3 Upgrade
-item.tucs:power4Upgrade.name=Power 4 Upgrade
-item.tucs:power5Upgrade.name=Power 5 Upgrade
-item.tucs:projectileProtection1Upgrade.name=Projectile Protection 1 Upgrade
-item.tucs:projectileProtection2Upgrade.name=Projectile Protection 2 Upgrade
-item.tucs:projectileProtection3Upgrade.name=Projectile Protection 3 Upgrade
-item.tucs:projectileProtection4Upgrade.name=Projectile Protection 4 Upgrade
-item.tucs:punch1Upgrade.name=Punch 1 Upgrade
-item.tucs:punch2Upgrade.name=Punch 2 Upgrade
-item.tucs:respiration1Upgrade.name=Respiration 1 Upgrade
-item.tucs:respiration2Upgrade.name=Respiration 2 Upgrade
-item.tucs:respiration3Upgrade.name=Respiration 3 Upgrade
-item.tucs:thorns1Upgrade.name=Thorns 1 Upgrade
-item.tucs:thorns2Upgrade.name=Thorns 2 Upgrade
-item.tucs:thorns3Upgrade.name=Thorns 3 Upgrade
-item.tucs:protection1Upgrade.name=Protection 1 Upgrade
-item.tucs:protection2Upgrade.name=Protection 2 Upgrade
-item.tucs:protection3Upgrade.name=Protection 3 Upgrade
-item.tucs:protection4Upgrade.name=Protection 4 Upgrade
-item.tucs:boa1Upgrade.name=Bane Of Arthropods 1 Upgrade
-item.tucs:boa2Upgrade.name=Bane Of Arthropods 2 Upgrade
-item.tucs:boa3Upgrade.name=Bane Of Arthropods 3 Upgrade
-item.tucs:boa4Upgrade.name=Bane Of Arthropods 4 Upgrade
-item.tucs:boa5Upgrade.name=Bane Of Arthropods 5 Upgrade
-item.tucs:efficiency1Upgrade.name=Efficiency 1 Upgrade
-item.tucs:efficiency2Upgrade.name=Efficiency 2 Upgrade
-item.tucs:efficiency3Upgrade.name=Efficiency 3 Upgrade
-item.tucs:efficiency4Upgrade.name=Efficiency 4 Upgrade
-item.tucs:efficiency5Upgrade.name=Efficiency 5 Upgrade
-item.tucs:smite1Upgrade.name=Smite 1 Upgrade
-item.tucs:smite2Upgrade.name=Smite 2 Upgrade
-item.tucs:smite3Upgrade.name=Smite 3 Upgrade
-item.tucs:smite4Upgrade.name=Smite 4 Upgrade
-item.tucs:smite5Upgrade.name=Smite 5 Upgrade
-item.tucs:fireaspect1Upgrade.name=Fire Aspect 1 Upgrade
-item.tucs:fireaspect2Upgrade.name=Fire Aspect 2 Upgrade
-item.tucs:knockback1Upgrade.name=Knockback 1 Upgrade
-item.tucs:knockback2Upgrade.name=Knockback 2 Upgrade
-item.tucs:unbreaking1Upgrade.name=Unbreaking 1 Upgrade
-item.tucs:unbreaking2Upgrade.name=Unbreaking 2 Upgrade
-item.tucs:unbreaking3Upgrade.name=Unbreaking 3 Upgrade
-item.tucs:heartOfTheDestroyerUpgrade.name=§c"Heart" Of the Destroyer Upgrade
 
+//Entities
+entity.vut.speeder.name=Hover Bike
 
 //Blocks
-tile.tucs:ancientTable.name=Ancient Table
-tile.tucs:oreCobblestoneium.name=Cobblestoneium Ore
-tile.tucs:blockCobblestoneium.name=Cobblestoneium Block
-tile.tucs:blockCobblestonedium.name=Cobblestonedium Block
-tile.tucs:ancientForge.name=Ancient Forge
-tile.tucs:soulbinder.name=Soul Forge
-tile.tucs:airMaker.name=Air Compressor
+
 
 //Container
-container.tucs:AncientForge=Ancient Forge
 
 //Misc
-itemGroup.VUT=The Unusual Cobblestone Mod
+itemGroup.vut=Vehicles Utils and Tools
 
 //Keys
-keys.tucs.category=The Unusual Cobblestone Mod
-keys.tucs.fly=Fly
-keys.tucs.flySpeed=Fly Speed
-keys.tucs.night=Night Vision
-
-
-//Info
-tile.tucs:ancientTable.info=This table is used to craft the higher tier of items and tools, it has been used for many centuries to make the finest tools of stone. It is also the only table that can handle the alloy of diamonds and cobblestone. This Crafting Table can also be used to vailla recipes
-
-//Lore
-tile.tucs:soulbinder.lore=No one knows how and when the table was made.
+keys.vut.category=Vehicles Utils and Tools
+keys.vut.down=Down
+keys.vut.start=Start
+keys.vut.vtol=VTOL
 
 //MSG
 msg.message_hoverBikeNotOwnerBreak.txt=You can't break this, you are not the owner. The Owner is:

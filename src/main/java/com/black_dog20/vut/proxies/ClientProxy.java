@@ -3,10 +3,12 @@ package com.black_dog20.vut.proxies;
 import net.minecraft.client.Minecraft;
 import net.minecraft.entity.player.EntityPlayer;
 
+import com.black_dog20.vut.client.settings.Keybindings;
 import com.black_dog20.vut.client.handler.KeyInputEventHandler;
 import com.black_dog20.vut.client.render.RenderHoverBike;
 import com.black_dog20.vut.entity.EntityHoverBike;
 
+import cpw.mods.fml.client.registry.ClientRegistry;
 import cpw.mods.fml.client.registry.RenderingRegistry;
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.network.simpleimpl.MessageContext;
@@ -16,6 +18,9 @@ public class ClientProxy extends CommonProxy {
 
 	@Override
 	public void registerKeyBindings() {
+		ClientRegistry.registerKeyBinding(Keybindings.START);
+		ClientRegistry.registerKeyBinding(Keybindings.DOWN);
+		ClientRegistry.registerKeyBinding(Keybindings.VTOL);
 	}
 
 	@Override

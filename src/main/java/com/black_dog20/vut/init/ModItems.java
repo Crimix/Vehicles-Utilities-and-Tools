@@ -26,6 +26,8 @@ public class ModItems {
 	public static final ItemVUT Back = new ItemVUT("Back");
 	public static final ItemVUT FlightCore = new ItemVUT("FlightCore");
 	public static final ItemVUT IngotBlueIron = new ItemVUT("IngotBlueIron");
+	public static final ItemVUT DustBlackIron = new ItemVUT("DustBlackIron");
+	public static final ItemVUT IngotBlackIron = new ItemVUT("IngotBlackIron");
 	
 	public static void init() {
 
@@ -46,6 +48,9 @@ public class ModItems {
 		GameRegistry.registerItem(Back, "Back");
 		GameRegistry.registerItem(FlightCore, "FlightCore");
 		GameRegistry.registerItem(IngotBlueIron, "IngotBlueIron");
+		GameRegistry.registerItem(DustBlackIron, "DustBlackIron");
+		GameRegistry.registerItem(IngotBlackIron, "IngotBlackIron");
+		
 	}
 
 }

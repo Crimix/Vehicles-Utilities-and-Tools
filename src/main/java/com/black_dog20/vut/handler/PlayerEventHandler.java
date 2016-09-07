@@ -80,13 +80,13 @@ public class PlayerEventHandler {
 		if(event.entity instanceof EntityPlayer){
 			EntityPlayer player = (EntityPlayer) event.entity;
 			if(player.ridingEntity != null){
-				if(player.worldObj.isRemote && Keybindings.down.getIsKeyPressed() && !downIsPressed){
+				if(player.worldObj.isRemote && Keybindings.DOWN.getIsKeyPressed() && !downIsPressed){
 					if(player.ridingEntity instanceof IEntityHoverVehicle){
 						downIsPressed = true;
 						PacketHandler.network.sendToServer(new MessagePlayerDownStart());
 					}
 				}
-				else if(player.worldObj.isRemote && !Keybindings.down.getIsKeyPressed() && downIsPressed){
+				else if(player.worldObj.isRemote && !Keybindings.DOWN.getIsKeyPressed() && downIsPressed){
 					if(player.ridingEntity instanceof IEntityHoverVehicle){
 						downIsPressed = false;
 						PacketHandler.network.sendToServer(new MessagePlayerDownStop());
