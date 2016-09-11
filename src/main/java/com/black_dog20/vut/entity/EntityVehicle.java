@@ -112,22 +112,25 @@ public class EntityVehicle extends Entity implements IEntityVehicle{
 			return false;
 		} else if (!this.worldObj.isRemote && !this.isDead) {
 
-			boolean flag = source.getEntity() instanceof EntityPlayer && (((EntityPlayer) source.getEntity()).getDisplayName().equals(this.Owner) || this.Owner.equals("none"));
-			if (flag) {
-				EntityPlayer player = (EntityPlayer) source.getEntity();
-				if(itemToDrop != null){
-					SaveVehicleNBTToItem(itemToDrop);
-					if(!player.inventory.addItemStackToInventory(itemToDrop)){
-						player.dropPlayerItemWithRandomChoice(itemToDrop, false);
+			boolean flag1 = source.getEntity() instanceof EntityPlayer;
+			if(flag1){
+				boolean flag =  (((EntityPlayer) source.getEntity()).getDisplayName().equals(this.Owner) || this.Owner.equals("none"));
+				if (flag) {
+					EntityPlayer player = (EntityPlayer) source.getEntity();
+					if(itemToDrop != null){
+						SaveVehicleNBTToItem(itemToDrop);
+						if(!player.inventory.addItemStackToInventory(itemToDrop)){
+							player.dropPlayerItemWithRandomChoice(itemToDrop, false);
+						}
 					}
+					this.setDead();
+				} else if (((EntityPlayer) source.getEntity()).capabilities.isCreativeMode) {
+					this.setDead();
+				} else {
+					ChatComponentTranslation msg = new ChatComponentTranslation("msg.message_hoverBikeNotOwnerBreak.txt");
+					msg.appendText(" " + this.Owner);
+					((EntityPlayer) source.getEntity()).addChatMessage(msg);
 				}
-				this.setDead();
-			} else if (((EntityPlayer) source.getEntity()).capabilities.isCreativeMode) {
-				this.setDead();
-			} else {
-				ChatComponentTranslation msg = new ChatComponentTranslation("msg.message_hoverBikeNotOwnerBreak.txt");
-				msg.appendText(" " + this.Owner);
-				((EntityPlayer) source.getEntity()).addChatMessage(msg);
 			}
 			return true;
 		} else {
@@ -221,7 +224,7 @@ public class EntityVehicle extends Entity implements IEntityVehicle{
 				this.setPosition(d2, d4, d11);
 			}
 		} else {
-			
+
 			VehicleBehaviour();
 
 			this.moveEntity(this.motionX, this.motionY, this.motionZ);
@@ -275,13 +278,13 @@ public class EntityVehicle extends Entity implements IEntityVehicle{
 			this.riddenByEntity.setPosition(this.posX + d0, this.posY + this.getMountedYOffset() + this.riddenByEntity.getYOffset(), this.posZ + d1);
 		}
 	}
-	
+
 	public void writeOwner(){
 		NBTTagCompound nbt = NBTHelper.getEntityNBT(this);
 		nbt.setString("Owner", this.Owner);
 		this.getEntityData().setTag(EntityPlayer.PERSISTED_NBT_TAG, nbt);
 	}
-	
+
 	public void readOwner(){
 		NBTTagCompound nbt = NBTHelper.getEntityNBT(this);
 		this.Owner = nbt.getString("Owner");
@@ -317,13 +320,13 @@ public class EntityVehicle extends Entity implements IEntityVehicle{
 				if (!this.worldObj.isRemote ) {
 					if(entityPlayer.getDisplayName().equals(Owner))
 						entityPlayer.mountEntity(this);
-				else{
-					if(!entityPlayer.worldObj.isRemote){
-						ChatComponentTranslation msg = new ChatComponentTranslation("msg.message_hoverBikeNotOwner.txt");
-						msg.appendText(" " + this.Owner);
-						entityPlayer.addChatMessage(msg);
-					}
-				
+					else{
+						if(!entityPlayer.worldObj.isRemote){
+							ChatComponentTranslation msg = new ChatComponentTranslation("msg.message_hoverBikeNotOwner.txt");
+							msg.appendText(" " + this.Owner);
+							entityPlayer.addChatMessage(msg);
+						}
+
 					}
 				}
 
@@ -398,18 +401,18 @@ public class EntityVehicle extends Entity implements IEntityVehicle{
 	@Override
 	public void VehicleBehaviour() {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 	@Override
 	public void SaveVehicleNBTToItem(ItemStack item) {
 		NBTTagCompound nbtTagCompound = NBTHelper.getEntityNBT(this);
 		item.stackTagCompound = nbtTagCompound;
-		
+
 	}
 
 	protected void openUpgradeInventory(EntityPlayer player) {
 		// TODO Auto-generated method stub
-		
+
 	}
 }

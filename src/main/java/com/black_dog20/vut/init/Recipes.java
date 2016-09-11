@@ -23,7 +23,7 @@ public class Recipes {
 		GameRegistry.addRecipe(new ShapedOreRecipe(ModItems.Front, new Object[] { " g ", "bbl", "bbb", 'l', Items.leather, 'g', Blocks.glass_pane, 'b', ModItems.IngotBlueIron}));
 		GameRegistry.addRecipe(new ShapelessOreRecipe(ModItems.HoverBike, ModItems.Back, ModItems.Front, ModItems.Hammer));
 		GameRegistry.addRecipe(new ShapedOreRecipe(ModItems.Wrench, new Object[] { "b b", " b ", " b ", 'b', ModItems.IngotBlueIron}));
-		GameRegistry.addRecipe(new ShapedOreRecipe(ModItems.Fuel1, new Object[] { "chc", "cwc", "ccc", 'h', ModItems.Hammer, 'c' , Items.coal , 'w', Items.water_bucket}));
+		GameRegistry.addRecipe(new ShapedOreRecipe(ModItems.Fuel1, new Object[] { "chc", "cgc", "cwc", 'h', ModItems.Hammer, 'c' , Items.coal , 'w', Items.bucket,'g',new ItemStack(Items.potionitem, 1, 8206)}));
 		GameRegistry.addRecipe(new ShapedOreRecipe(ModItems.Fuel2, new Object[] { "nnn", "nfn", "nnn", 'f', ModItems.Fuel1, 'n' , Items.nether_wart }));
 		GameRegistry.addSmelting(ModItems.Fuel2, new ItemStack(ModItems.Fuel), 1.0f);
 		GameRegistry.addRecipe(new ShapedOreRecipe(ModItems.FuelTank, new Object[] { "ihi", "i i", "iii", 'h', ModItems.Hammer, 'i' , Items.iron_ingot }));

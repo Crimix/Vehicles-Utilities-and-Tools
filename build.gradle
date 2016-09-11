@@ -17,7 +17,7 @@ buildscript {
 
 apply plugin: 'forge'
 
-version = "1.7.10-1.3Beta"
+version = "1.7.10-1.5Beta"
 group= "com.black_dog20.vut" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "vut"
 

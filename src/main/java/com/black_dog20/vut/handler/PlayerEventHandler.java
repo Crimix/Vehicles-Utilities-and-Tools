@@ -1,10 +1,17 @@
 package com.black_dog20.vut.handler;
 
 import java.text.DecimalFormat;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.ListIterator;
 
 import net.minecraft.client.Minecraft;
+import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.Blocks;
+import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.world.EnumSkyBlock;
 import net.minecraftforge.client.event.RenderGameOverlayEvent;
 import net.minecraftforge.client.event.RenderGameOverlayEvent.ElementType;
 import net.minecraftforge.event.entity.living.LivingEvent.LivingUpdateEvent;
@@ -12,11 +19,13 @@ import net.minecraftforge.event.entity.living.LivingEvent.LivingUpdateEvent;
 import com.black_dog20.vut.client.settings.Keybindings;
 import com.black_dog20.vut.entity.EntityVehicle;
 import com.black_dog20.vut.entity.IEntityHoverVehicle;
+import com.black_dog20.vut.init.ModItems;
 import com.black_dog20.vut.network.PacketHandler;
 import com.black_dog20.vut.network.message.MessagePlayerDownStart;
 import com.black_dog20.vut.network.message.MessagePlayerDownStop;
 import com.black_dog20.vut.network.message.MessagePlayerUpStart;
 import com.black_dog20.vut.network.message.MessagePlayerUpStop;
+import com.black_dog20.vut.utility.Coordinate;
 import com.black_dog20.vut.utility.NBTHelper;
 
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
@@ -74,7 +83,7 @@ public class PlayerEventHandler {
 	//	}
 
 
-	
+
 	@SubscribeEvent
 	public void Interact(LivingUpdateEvent event) {
 		if(event.entity instanceof EntityPlayer){
@@ -107,7 +116,79 @@ public class PlayerEventHandler {
 			}
 		}
 	}
-	
+	private ArrayList<Coordinate> coords = new ArrayList<Coordinate>();
+
+	private void addLight(EntityPlayer player, Coordinate coordinate){
+		player.worldObj.setLightValue(EnumSkyBlock.Block, (int) coordinate.x,
+				(int) coordinate.y, (int) coordinate.z, 15);
+		player.worldObj.markBlockRangeForRenderUpdate((int) coordinate.x,
+				(int) coordinate.y, (int) coordinate.z, 12, 12, 12);
+		player.worldObj.markBlockForUpdate((int) coordinate.x, (int) coordinate.y,
+				(int) coordinate.z);
+		player.worldObj.updateLightByType(EnumSkyBlock.Block, (int) coordinate.x,
+				(int) coordinate.y + 1, (int) coordinate.z);
+		player.worldObj.updateLightByType(EnumSkyBlock.Block, (int) coordinate.x,
+				(int) coordinate.y - 1, (int) coordinate.z);
+		player.worldObj.updateLightByType(EnumSkyBlock.Block,
+				(int) coordinate.x + 1, (int) coordinate.y, (int) coordinate.z);
+		player.worldObj.updateLightByType(EnumSkyBlock.Block,
+				(int) coordinate.x - 1, (int) coordinate.y, (int) coordinate.z);
+		player.worldObj.updateLightByType(EnumSkyBlock.Block, (int) coordinate.x,
+				(int) coordinate.y, (int) coordinate.z + 1);
+		player.worldObj.updateLightByType(EnumSkyBlock.Block, (int) coordinate.x,
+				(int) coordinate.y, (int) coordinate.z - 1);
+
+	}
+
+
+	private void removeLight(EntityPlayer player, Coordinate coordinate){
+		player.worldObj.updateLightByType(EnumSkyBlock.Block, (int) coordinate.x,
+				(int) coordinate.y, (int) coordinate.z);
+		//		player.worldObj.markBlockRangeForRenderUpdate((int) coordinate.x,
+		//				(int) coordinate.y, (int) coordinate.z, 12, 12, 12);
+		//		player.worldObj.markBlockForUpdate((int) coordinate.x, (int) coordinate.y,
+		//				(int) coordinate.z);
+	}
+
+	private int ticksLight = 0;
+
+	@SubscribeEvent
+	public void LightUpAroundPlayer(LivingUpdateEvent event){
+		if(event.entityLiving instanceof EntityPlayer){
+			EntityPlayer player = (EntityPlayer) event.entityLiving;
+			if(ticksLight%20==0){
+//				System.out.println("light");
+				ticksLight=0;
+				if(player.getHeldItem()!=null && player.getHeldItem().getItem() == ModItems.Engine){
+					if(coords.size()>3){
+						Coordinate c = coords.get(0);
+						if(!(c.x == player.posX && c.y == player.posY && c.z == player.posZ)){
+							removeLight(player, c);
+							coords.remove(0);
+						}
+					}
+					Coordinate coord = new Coordinate(player.posX,player.posY,player.posZ,player.getUniqueID().toString());
+					coords.add(coord);
+					addLight(player,coord);
+				}
+				else{
+					ListIterator<Coordinate> litr = coords.listIterator();
+					while (litr.hasNext()) {
+						Coordinate c = litr.next();
+						if(c.UUID.equals(player.getUniqueID().toString())){
+							removeLight(player, c);
+							litr.remove();
+						}
+					}
+				}
+
+			}
+			ticksLight++;
+		}
+	}
+
+
+
 	@SideOnly(Side.CLIENT)
 	@SubscribeEvent
 	public void onGuiRender(RenderGameOverlayEvent event) {
@@ -123,9 +204,9 @@ public class PlayerEventHandler {
 			Minecraft.getMinecraft().fontRenderer.drawStringWithShadow(df.format(speed) + " blocks/s", 2, 12, 0xffffff);
 		}
 	}
-	
+
 	@SubscribeEvent
-	public void CalculateSpedd(LivingUpdateEvent event) {
+	public void CalculateSpeed(LivingUpdateEvent event) {
 		if(event.entity instanceof EntityPlayer){
 			EntityPlayer entity = (EntityPlayer) event.entity;
 			if(entity.ridingEntity != null && entity.ridingEntity instanceof EntityVehicle){

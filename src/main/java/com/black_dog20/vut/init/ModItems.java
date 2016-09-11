@@ -1,5 +1,6 @@
 package com.black_dog20.vut.init;
 
+import com.black_dog20.vut.item.ItemHammer;
 import com.black_dog20.vut.item.ItemHoverBike;
 import com.black_dog20.vut.item.ItemVUT;
 import com.black_dog20.vut.reference.Reference;
@@ -18,10 +19,10 @@ public class ModItems {
 	public static final ItemVUT Security = new ItemVUT("security"); 
 	public static final ItemVUT Vtol = new ItemVUT("vtol");
 	public static final ItemVUT FuelTank = new ItemVUT("fuelTank"); 
-	public static final ItemVUT Fuel = new ItemVUT("fuel"); 
-	public static final ItemVUT Fuel1 = new ItemVUT("fuel1"); 
-	public static final ItemVUT Fuel2 = new ItemVUT("fuel2"); 
-	public static final ItemVUT Hammer = new ItemVUT("hammer"); 
+	public static final ItemVUT Fuel = (ItemVUT) new ItemVUT("fuel").setMaxStackSize(1); 
+	public static final ItemVUT Fuel1 = (ItemVUT) new ItemVUT("fuel1").setMaxStackSize(1); 
+	public static final ItemVUT Fuel2 = (ItemVUT) new ItemVUT("fuel2").setMaxStackSize(1); 
+	public static final ItemHammer Hammer = new ItemHammer(); 
 	public static final ItemVUT Front = new ItemVUT("front");
 	public static final ItemVUT Back = new ItemVUT("back");
 	public static final ItemVUT FlightCore = new ItemVUT("flightCore");
